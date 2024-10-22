@@ -39,7 +39,7 @@ public class GetInputFieldValue : MonoBehaviour
     [SerializeField]
     TMP_InputField i_NumberOfServings;
     [SerializeField]
-    TMP_Text TotalPrice;
+    TMP_Text i_Total;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -51,6 +51,7 @@ public class GetInputFieldValue : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
+            //input fields for cost and amount
             float flourCost = -1;
             Debug.Log(float.TryParse(i_flourCost.text, out flourCost));
             float flourAmt = -1;
@@ -71,8 +72,6 @@ public class GetInputFieldValue : MonoBehaviour
             Debug.Log(PorkSAmt);
             
             
-            
-            
             float Cost = (flourSAmt + ChiliSAmt + PorkSAmt);
             Debug.Log(Cost);
             float NOS = -1;
@@ -83,7 +82,8 @@ public class GetInputFieldValue : MonoBehaviour
             Debug.Log(CostPerServing);
             float PPS = (CostPerServing * MarkUpPrice);
             Debug.Log(PPS);
-            //GetComponent<Text>().text = PPS;
+            string PricePerServing = PPS.ToString();
+            i_Total.text = PricePerServing;
         }
     }
 }
