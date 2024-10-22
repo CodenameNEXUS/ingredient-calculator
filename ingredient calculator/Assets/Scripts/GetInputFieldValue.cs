@@ -1,5 +1,7 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+using Unity.Collections.LowLevel.Unsafe;
 public class GetInputFieldValue : MonoBehaviour
 {
     [SerializeField]
@@ -35,7 +37,9 @@ public class GetInputFieldValue : MonoBehaviour
     [SerializeField]
     TMP_InputField i_MarkUpPrice;
     [SerializeField]
-    TMP_InputField i_NumberOfUnits;
+    TMP_InputField i_NumberOfServings;
+    [SerializeField]
+    TMP_Text TotalPrice;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -51,17 +55,35 @@ public class GetInputFieldValue : MonoBehaviour
             Debug.Log(float.TryParse(i_flourCost.text, out flourCost));
             float flourAmt = -1;
             Debug.Log(float.TryParse(i_flourAmt.text, out flourAmt));
-            Debug.Log(flourAmt * flourCost);
+            float flourSAmt = (flourAmt * flourCost);
+            Debug.Log(flourSAmt);
             float ChiliCost = -1;
             Debug.Log(float.TryParse(i_ChiliCost.text, out ChiliCost));
             float ChiliAmt = -1;
             Debug.Log(float.TryParse(i_ChiliAmt.text, out ChiliAmt));
-            Debug.Log(ChiliAmt * ChiliCost);
+            float ChiliSAmt = (ChiliAmt * ChiliCost);
+            Debug.Log(ChiliSAmt);
             float PorkCost = -1;
             Debug.Log(float.TryParse(i_PorkCost.text, out PorkCost));
             float PorkAmt = -1;
             Debug.Log(float.TryParse(i_PorkAmt.text, out PorkAmt));
-            Debug.Log(PorkAmt * PorkCost);
+            float PorkSAmt = (PorkAmt * PorkCost);
+            Debug.Log(PorkSAmt);
+            
+            
+            
+            
+            float Cost = (flourSAmt + ChiliSAmt + PorkSAmt);
+            Debug.Log(Cost);
+            float NOS = -1;
+            Debug.Log(float.TryParse(i_NumberOfServings.text, out NOS));
+            float MarkUpPrice = -1;
+            Debug.Log(float.TryParse(i_MarkUpPrice.text, out MarkUpPrice));
+            float CostPerServing = (Cost / NOS);
+            Debug.Log(CostPerServing);
+            float PPS = (CostPerServing * MarkUpPrice);
+            Debug.Log(PPS);
+            //GetComponent<Text>().text = PPS;
         }
     }
 }
