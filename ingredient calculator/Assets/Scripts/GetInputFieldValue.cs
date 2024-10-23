@@ -58,6 +58,31 @@ public class GetInputFieldValue : MonoBehaviour
     TMP_InputField i_SugerCost;
 
     [SerializeField]
+    TMP_InputField i_butterAmt;
+    [SerializeField]
+    TMP_InputField i_butterCost;
+
+    [SerializeField]
+    TMP_InputField i_onionAmt;
+    [SerializeField]
+    TMP_InputField i_onionCost;
+
+    [SerializeField]
+    TMP_InputField i_eggAmt;
+    [SerializeField]
+    TMP_InputField i_eggCost;
+
+    [SerializeField]
+    TMP_InputField i_cinnamonAmt;
+    [SerializeField]
+    TMP_InputField i_cinnamonCost;
+
+    [SerializeField]
+    TMP_InputField i_BakingPowderAmt;
+    [SerializeField]
+    TMP_InputField i_BakingPowderCost;
+
+    [SerializeField]
     TMP_InputField i_MarkUpPrice;
     [SerializeField]
     TMP_InputField i_NumberOfServings;
@@ -145,6 +170,41 @@ public class GetInputFieldValue : MonoBehaviour
             Debug.Log(float.TryParse(i_SugerAmt.text, out SugerAmt));
             float SugerSAmt = (SugerAmt * SugerCost);
             Debug.Log(SugerSAmt);
+
+            float butterCost = -1;
+            Debug.Log(float.TryParse(i_butterCost.text, out butterCost));
+            float butterAmt = -1;
+            Debug.Log(float.TryParse(i_butterAmt.text, out butterAmt));
+            float butterSAmt = (butterAmt * butterCost);
+            Debug.Log(butterSAmt);
+
+            float onionCost = -1;
+            Debug.Log(float.TryParse(i_onionCost.text, out onionCost));
+            float onionAmt = -1;
+            Debug.Log(float.TryParse(i_onionAmt.text, out onionAmt));
+            float onionSAmt = (onionAmt * onionCost);
+            Debug.Log(onionSAmt);
+
+            float eggCost = -1;
+            Debug.Log(float.TryParse(i_eggCost.text, out eggCost));
+            float eggAmt = -1;
+            Debug.Log(float.TryParse(i_eggAmt.text, out eggAmt));
+            float eggSAmt = (eggAmt * eggCost);
+            Debug.Log(eggSAmt);
+
+            float cinnamonCost = -1;
+            Debug.Log(float.TryParse(i_cinnamonCost.text, out cinnamonCost));
+            float cinnamonAmt = -1;
+            Debug.Log(float.TryParse(i_cinnamonAmt.text, out cinnamonAmt));
+            float cinnamonSAmt = (cinnamonAmt * cinnamonCost);
+            Debug.Log(cinnamonSAmt);
+
+            float BakingPowderCost = -1;
+            Debug.Log(float.TryParse(i_BakingPowderCost.text, out BakingPowderCost));
+            float BakingPowderAmt = -1;
+            Debug.Log(float.TryParse(i_BakingPowderCost.text, out BakingPowderCost));
+            float BakingPowderSAmt = (BakingPowderAmt * BakingPowderCost);
+            Debug.Log(BakingPowderSAmt);
 
             float Cost = (flourSAmt + ChiliSAmt + PorkSAmt + SugerSAmt + RiceSAmt + EctSAmt + SaltSAmt + TortillaChipSAmt + LimeSAmt + HominySAmt);
             Debug.Log(Cost);
