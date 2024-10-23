@@ -157,7 +157,7 @@ public class GetInputFieldValue : MonoBehaviour
             float PPS = (CostPerServing * MarkUpPrice);
             Debug.Log(PPS);
             string PricePerServing = PPS.ToString();
-            i_Total.text = PricePerServing + "$";
+            i_Total.text = "Total:" + PricePerServing + "$";
         }
         // for coping and pasting for new ingredients
         /*float Cost = -1;
