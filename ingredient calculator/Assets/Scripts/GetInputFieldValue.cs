@@ -206,7 +206,7 @@ public class GetInputFieldValue : MonoBehaviour
             float BakingPowderSAmt = (BakingPowderAmt * BakingPowderCost);
             Debug.Log(BakingPowderSAmt);
 
-            float Cost = (flourSAmt + ChiliSAmt + PorkSAmt + SugerSAmt + RiceSAmt + EctSAmt + SaltSAmt + TortillaChipSAmt + LimeSAmt + HominySAmt);
+            float Cost = (flourSAmt + ChiliSAmt + PorkSAmt + SugerSAmt + RiceSAmt + EctSAmt + SaltSAmt + TortillaChipSAmt + LimeSAmt + HominySAmt + butterSAmt + onionSAmt + eggSAmt + cinnamonSAmt + BakingPowderSAmt);
             Debug.Log(Cost);
             float NOS = -1;
             Debug.Log(float.TryParse(i_NumberOfServings.text, out NOS));
