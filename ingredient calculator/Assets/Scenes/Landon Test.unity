@@ -1024,8 +1024,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 659968553, guid: f167bc29b19bf944ba0cbede2ca645ba, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3655,8 +3655,10 @@ MonoBehaviour:
   i_HominyCost: {fileID: 308271648}
   i_LimeAmt: {fileID: 0}
   i_LimeCost: {fileID: 0}
-  i_TrotillaChipAmt: {fileID: 0}
+  i_TortillaChipAmt: {fileID: 0}
   i_TortillaChipCost: {fileID: 0}
+  i_SaltAmt: {fileID: 0}
+  i_SaltCost: {fileID: 0}
   i_EctAmt: {fileID: 0}
   i_EctCost: {fileID: 0}
   i_MarkUpPrice: {fileID: 1838140828}

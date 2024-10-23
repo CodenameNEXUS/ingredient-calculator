@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using Unity.Collections.LowLevel.Unsafe;
+using System.Runtime.CompilerServices;
 public class GetInputFieldValue : MonoBehaviour
 {
     [SerializeField]
@@ -10,34 +11,47 @@ public class GetInputFieldValue : MonoBehaviour
     TMP_InputField i_flourAmt;
     [SerializeField]
     TMP_InputField i_flourCost;
+
     [SerializeField]
     TMP_InputField i_ChiliAmt;
     [SerializeField]
     TMP_InputField i_ChiliCost;
+
     [SerializeField]
     TMP_InputField i_PorkAmt;
     [SerializeField]
     TMP_InputField i_PorkCost;
+
     [SerializeField]
     TMP_InputField i_HominyAmt;
     [SerializeField]
     TMP_InputField i_HominyCost;
+
     [SerializeField]
     TMP_InputField i_LimeAmt;
     [SerializeField]
     TMP_InputField i_LimeCost;
+
     [SerializeField]
-    TMP_InputField i_TrotillaChipAmt;
+    TMP_InputField i_TortillaChipAmt;
     [SerializeField]
     TMP_InputField i_TortillaChipCost;
+
+    [SerializeField]
+    TMP_InputField i_SaltAmt;
+    [SerializeField]
+    TMP_InputField i_SaltCost;
+
     [SerializeField]
     TMP_InputField i_EctAmt;
     [SerializeField]
     TMP_InputField i_EctCost;
+
     [SerializeField]
     TMP_InputField i_MarkUpPrice;
     [SerializeField]
     TMP_InputField i_NumberOfServings;
+
     [SerializeField]
     TMP_Text i_Total;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -58,20 +72,56 @@ public class GetInputFieldValue : MonoBehaviour
             Debug.Log(float.TryParse(i_flourAmt.text, out flourAmt));
             float flourSAmt = (flourAmt * flourCost);
             Debug.Log(flourSAmt);
+
             float ChiliCost = -1;
             Debug.Log(float.TryParse(i_ChiliCost.text, out ChiliCost));
             float ChiliAmt = -1;
             Debug.Log(float.TryParse(i_ChiliAmt.text, out ChiliAmt));
             float ChiliSAmt = (ChiliAmt * ChiliCost);
             Debug.Log(ChiliSAmt);
+
             float PorkCost = -1;
             Debug.Log(float.TryParse(i_PorkCost.text, out PorkCost));
             float PorkAmt = -1;
             Debug.Log(float.TryParse(i_PorkAmt.text, out PorkAmt));
             float PorkSAmt = (PorkAmt * PorkCost);
             Debug.Log(PorkSAmt);
-            
-            
+
+            /*float HominyCost = -1;
+            Debug.Log(float.TryParse(i_HominyCost.text, out HominyCost));
+            float HominyAmt = -1;
+            Debug.Log(float.TryParse(i_HominyAmt.text, out HominyAmt));
+            float HominySAmt = (HominyAmt * HominyCost);
+            Debug.Log(HominySAmt);
+
+            float LimeCost = -1;
+            Debug.Log(float.TryParse(i_LimeCost.text, out LimeCost));
+            float LimeAmt = -1;
+            Debug.Log(float.TryParse(i_LimeAmt.text, out LimeAmt));
+            float LimeSAmt = (LimeAmt * LimeCost);
+            Debug.Log(LimeSAmt);
+
+            float TortillaChipCost = -1;
+            Debug.Log(float.TryParse(i_TortillaChipCost.text, out TortillaChipCost));
+            float TortillaChipAmt = -1;
+            Debug.Log(float.TryParse(i_TortillaChipAmt.text, out TortillaChipAmt));
+            float TortillaChipSAmt = (TortillaChipAmt * TortillaChipCost);
+            Debug.Log(TortillaChipSAmt);
+
+            float SaltCost = -1;
+            Debug.Log(float.TryParse(i_SaltCost.text, out SaltCost));
+            float SaltAmt = -1;
+            Debug.Log(float.TryParse(i_SaltAmt.text, out SaltAmt));
+            float SaltSAmt = (SaltAmt * SaltCost);
+            Debug.Log(SaltSAmt);
+
+            float EctCost = -1;
+            Debug.Log(float.TryParse(i_EctCost.text, out EctCost));
+            float EctAmt = -1;
+            Debug.Log(float.TryParse(i_EctAmt.text, out EctAmt));
+            float EctSAmt = (EctAmt * EctCost);
+            Debug.Log(EctSAmt);*/
+
             float Cost = (flourSAmt + ChiliSAmt + PorkSAmt);
             Debug.Log(Cost);
             float NOS = -1;
@@ -85,5 +135,12 @@ public class GetInputFieldValue : MonoBehaviour
             string PricePerServing = PPS.ToString();
             i_Total.text = PricePerServing;
         }
+
+        /*float Cost = -1;
+        Debug.Log(float.TryParse(i_Cost.text, out Cost));
+        float Amt = -1;
+        Debug.Log(float.TryParse(i_Amt.text, out Amt));
+        float SAmt = (Amt * Cost);
+        Debug.Log(SAmt);*/
     }
 }
